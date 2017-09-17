@@ -923,6 +923,16 @@ there.
 
 @media (min-width: 1200px) {}
 
+
+/* Wordpress img alignment */
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+
 body {
 	color: #333;
 	background-color: #F2F2F2;
@@ -1389,6 +1399,17 @@ display: block;
 	padding: 10px;
 	border-radius: 5px;
 
+}
+
+.main-content img {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+    max-width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: .3rem;
 }
 
 h5 {
