@@ -1309,6 +1309,8 @@ display: block;
 
 	}
 
+
+
 @media (min-width: 530px) {
 
 .primary-nav a {
@@ -1326,6 +1328,10 @@ display: block;
 	        transform: scale(1);
 	opacity: 1;
 	}
+
+
+
+
 
 .large-hero {
 
@@ -1350,6 +1356,8 @@ display: block;
 	position: relative;
 	margin-top: 15px;
 }
+
+
 
 @media (min-width: 880px) {
 
@@ -1381,6 +1389,10 @@ display: block;
 	padding: 10px;
 	border-radius: 5px;
 
+}
+
+h5 {
+  text-align: center;
 }
 
 .aside__urgent-news {
