@@ -11,7 +11,7 @@ get_header();
 if (have_posts()) :
 	while (have_posts()) : the_post(); ?>
 
-	 
+	 					<div class="post-content u-cf">
 
 						<h2 class="post"><a href="<?php the_permalink(); ?>">
 						<?php the_title(); ?></a></h2>
@@ -20,7 +20,7 @@ if (have_posts()) :
 							
 						<?php 
 
-							$categories = get_the_category();
+							$categories = get_the_category(); 
 							$separator = ", ";
 							$output = '';
 
@@ -45,10 +45,10 @@ if (have_posts()) :
 
 				
 
-	<?php endwhile;
+	<?php endwhile; ?>
 
-			
-
+			</div>
+<?php
 	else :
 		echo '<p> No Content found</p>';
 
