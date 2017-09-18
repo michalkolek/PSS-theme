@@ -11,19 +11,7 @@ get_header();
 if (have_posts()) :
 	while (have_posts()) : the_post(); ?>
 
-					<div class="post-content u-cf">
-	 					
-	 					<?php if (has_post_thumbnail()) {
-	 						?>
-	 						<div class="post-thumbnail u-cf"><a href="<?php the_permalink(); ?>">
-	 					<?php the_post_thumbnail('small-thumbnail')  ?></a>
-						</div>
-						
-						<?php } ?>
-
-	 					
-						
-
+	 					<div class="post-content u-cf">
 
 						<h2 class="post"><a href="<?php the_permalink(); ?>">
 						<?php the_title(); ?></a></h2>
@@ -53,8 +41,7 @@ if (have_posts()) :
 
 						 <?php the_time('j/m/Y'); ?></p>
 						
-
-						
+						<div class="banner-image"><?php the_post_thumbnail('banner-image'); ?></div>
 
 						<?php the_content(); ?>
 

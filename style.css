@@ -1421,6 +1421,18 @@ h5 {
   text-align: center;
 }
 }
+
+.post-thumbnail {
+  float: left;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+
+.banner-image {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .aside__urgent-news {
         background-color: #E9E8E7;
         border-radius: 5px;
