@@ -1422,6 +1422,20 @@ h5 {
 }
 }
 
+.post-content {
+  margin-left: 7px;
+}
+
+.post-content h2 a {
+  color: red;
+  text-decoration: none;
+}
+
+.post-content h2 a:hover {
+  font-weight: 500;
+ 
+}
+
 .post-thumbnail {
   float: left;
   margin-right: 20px;

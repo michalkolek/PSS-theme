@@ -28,7 +28,7 @@ if (have_posts()) :
 						<h2 class="post"><a href="<?php the_permalink(); ?>">
 						<?php the_title(); ?></a></h2>
 
-						<p class="post-info">Opublikowano w kategorii: 
+						<p class="post-info"><i class="fa fa-folder-open" aria-hidden="true"></i>  
 							
 						<?php 
 
@@ -44,14 +44,14 @@ if (have_posts()) :
 
 								}
 
-								echo trim($output, $separator);
+								echo trim ($output, $separator);
 							}
 
 						 ?>
 
 						 |
 
-						 <?php the_time('j/m/Y'); ?></p>
+						<i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('j/m/Y'); ?></p>
 						
 
 						

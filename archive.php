@@ -55,16 +55,24 @@ if (have_posts()) :
 
 	while (have_posts()) : the_post(); ?>
 
-	 
+	 						<div class="post-content u-cf">
 
-						<h2 class="post"><a href="<?php the_permalink(); ?>">
+	 					<?php if (has_post_thumbnail()) {
+	 						?>
+	 						<div class="post-thumbnail u-cf"><a href="<?php the_permalink(); ?>">
+	 					<?php the_post_thumbnail('small-thumbnail')  ?></a>
+						</div>
+						
+						<?php } ?>
+
+							<h2 class="post"><a href="<?php the_permalink(); ?>">
 						<?php the_title(); ?></a></h2>
 
-						<p class="post-info">Opublikowano w kategorii: 
+						<p class="post-info"><i class="fa fa-folder-open" aria-hidden="true"></i>  
 							
 						<?php 
 
-							$categories = get_the_category();
+							$categories = get_the_category(); 
 							$separator = ", ";
 							$output = '';
 
@@ -76,15 +84,14 @@ if (have_posts()) :
 
 								}
 
-								echo trim($output, $separator);
+								echo trim ($output, $separator);
 							}
 
 						 ?>
 
 						 |
 
-						 <?php the_time('j/m/Y'); ?></p>
-
+						<i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('j/m/Y'); ?></p>
 						<?php the_content(); ?>
 
 				

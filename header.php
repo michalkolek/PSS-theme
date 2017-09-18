@@ -77,7 +77,7 @@
                 <div class="three columns">
                     <aside class="aside">
                       <div class="aside__urgent-news">
-                        <h5>Nabliższe wydarzenia</h5>
+                        <h5>Najbliższe wydarzenia</h5>
                         <h6>Rozpoczęcie roku szkolnego 2017/2018 o godz. 10:00.<br>9 września 2017</h6>
                       
                       </div>
