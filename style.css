@@ -1409,13 +1409,18 @@ display: block;
     max-width: 100%;
     text-align: center;
     vertical-align: middle;
-    padding-left: .3rem;
+    padding-left: .25rem;
 }
+
+@media (min-width: 880px) {
+  .main-content img {
+    padding-left: .3rem;
+} 
 
 h5 {
   text-align: center;
 }
-
+}
 .aside__urgent-news {
         background-color: #E9E8E7;
         border-radius: 5px;
