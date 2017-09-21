@@ -62,7 +62,7 @@
         </div>
       </div>
     </header>
-     <div class="large-hero">
+     <div class="large-hero skip-me">
 
         <picture>
           <source srcset="<?php bloginfo('template_url'); ?>/images/4.jpg 848w" media="(min-width: 768px)">

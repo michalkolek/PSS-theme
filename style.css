@@ -1372,7 +1372,7 @@ display: block;
 @media (min-width: 880px) {
 
 .main-section {
-		margin-top: 40px
+		margin-top: 20px
 }
 	}
 
@@ -1398,6 +1398,7 @@ display: block;
 	background-color: #E9E8E7;
 	padding: 10px;
 	border-radius: 5px;
+  padding-top: 20px;
 
 }
 
@@ -1652,3 +1653,51 @@ h5 {
              padding-top: 0rem
     }
 	}
+
+
+.main-section-header-posts {
+  margin-top: 0;
+}
+
+.skip-me {
+  display: none;
+
+}
+
+.unhide {
+  display: block;
+}
+
+.main-content-advert p {
+  background-color: white;
+}
+
+.show-me-mobile {
+   visibility: visible;
+  display: initial;
+  
+  
+}
+
+@media (min-width: 550px){
+.show-me-mobile {
+visibility: hidden;
+  display: none;
+}
+}
+
+.hide-me-mobile {
+  visibility: hidden;
+  display: none;
+}
+
+@media (min-width: 550px){
+.hide-me-mobile {
+visibility: visible;
+  display: initial;
+}
+}
+
+hr {
+  margin: 5px 0 15px 0;
+}

@@ -2,12 +2,7 @@
 
 get_header();
 
-?>
 
-<div class="nine columns">
-                    <article class="main-content">
-
-<?php
 if (have_posts()) :
 
 ?>

@@ -47,4 +47,15 @@ function pss_theme_setup() {
 
 add_action('after_setup_theme', 'pss_theme_setup');
 
+
+// Add upcoming events section to admin appearance customize screen
+
+
+
+
+
+
+
+
+
 ?>
