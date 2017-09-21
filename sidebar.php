@@ -4,13 +4,10 @@
 
                       <div class="aside__urgent-news">
                         <h5>
-                          <?php echo get_theme_mod('pss-events-setting-headline')
+                          <?php echo esc_html( get_the_title($post = 105) ); 
                           ?>
                         </h5>
-                        <h6>
-                        
-                        <a href="<?php echo get_theme_mod('pss-events-setting-link') ?>"><?php echo wpautop(get_theme_mod('pss-events-setting-paragraph'))
-                          ?></a>
+                        <h6><?php echo apply_filters('the_content', get_post_field('post_content', $post_id=105));?>
                           </h6>                     
                       </div>
 
