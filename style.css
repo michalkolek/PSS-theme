@@ -1701,3 +1701,7 @@ visibility: visible;
 hr {
   margin: 5px 0 15px 0;
 }
+
+.aside__icon .fa {
+  font-size: 3em;
+}
