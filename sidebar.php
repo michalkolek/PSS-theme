@@ -3,8 +3,15 @@
                     <aside class="aside">
 
                       <div class="aside__urgent-news">
-                        <h5>Najbliższe wydarzenia</h5>
-                        <h6>Rozpoczęcie roku szkolnego 2017/2018 o godz. 10:00.<br>9 września 2017</h6>                     
+                        <h5>
+                          <?php echo get_theme_mod('pss-events-setting-headline')
+                          ?>
+                        </h5>
+                        <h6>
+                        
+                        <a href="<?php echo get_theme_mod('pss-events-setting-link') ?>"><?php echo wpautop(get_theme_mod('pss-events-setting-paragraph'))
+                          ?></a>
+                          </h6>                     
                       </div>
 
                

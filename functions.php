@@ -50,8 +50,49 @@ add_action('after_setup_theme', 'pss_theme_setup');
 
 // Add upcoming events section to admin appearance customize screen
 
+function pss_events($wp_customize) {
+	$wp_customize->add_section('pss-events-section', array(
+		'title' => 'Najblizsze wydarzenia',
+		'priority' => 1
+	));
+
+	$wp_customize->add_setting('pss-events-setting-headline', array(
+		'default' => 'Najbliższe wydarzenia'
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-events-control-headline', array(
+		'label' => 'Nagłówek',
+		'section' => 'pss-events-section',
+		'settings' => 'pss-events-setting-headline'
+	)));
 
 
+	$wp_customize->add_setting('pss-events-setting-paragraph', array(
+		'default' => 'Rozpoczęcie roku szkolnego 2017/2018 o godz. 10:00. 9 września 2017'
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-events-control-paragraph', array(
+		'label' => 'Paragraf',
+		'section' => 'pss-events-section',
+		'settings' => 'pss-events-setting-paragraph',
+		'type' => 'textarea'
+	)));
+
+
+	$wp_customize->add_setting('pss-events-setting-link');
+
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-events-control-link', array(
+		'label' => 'Link',
+		'section' => 'pss-events-section',
+		'settings' => 'pss-events-setting-link',
+		'type' => 'url'
+	)));
+
+}
+
+
+
+add_action('customize_register', 'pss_events');
 
 
 
