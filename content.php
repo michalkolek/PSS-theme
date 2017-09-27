@@ -34,11 +34,18 @@
 	<i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('j/m/Y'); ?>
 </p>
 
-<?php the_content(); 
+<?php the_content(); ?>
 
-if ( 2 === $count ) { ?>
+<?php if (is_single() OR is_page()) {}
+
+else {
+	?> 
+	<hr>
+<?php } ?>
+
+
+<?php if ( 2 === $count ) { ?>
 		<div class="main-content-advert">
-			<hr>
 			<p>Lorem ipsum</p>		
 			<p>Lorem impsum</p>
 
@@ -51,19 +58,9 @@ $count++; ?>
 
 </div>
 
-<?php if (is_single() OR is_page()) {}
 
-else {
-	?> 
-	<hr>
-<?php }
-
-
- endwhile;
+<?php endwhile;
 	else :
 		echo '<p> No Content found</p>';
 
 	endif; ?>
-
-
-

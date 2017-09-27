@@ -1,5 +1,38 @@
-require('./gulp/tasks/styles');
-require('./gulp/tasks/watch');
-require('./gulp/tasks/sprite');
-require('./gulp/tasks/scripts');
-require('./gulp/tasks/modernizr');
+var gulp = require('gulp'),
+watch = require('gulp-watch'),
+browserSync = require('browser-sync').create();
+
+gulp.task('watch', function() {
+
+	browserSync.init({
+		notify: false,
+		browser: "chrome",
+		proxy: "localhost/pss"
+		
+	});
+
+	watch('./*.php', function() {
+		browserSync.reload();
+	});
+
+	watch('./*.css', function() {
+		gulp.start('cssInject');
+	});
+
+	watch('./app/assets/scripts/**/*.js', function() {
+		gulp.start('scriptsRefresh');
+
+	});
+
+});
+
+
+gulp.task('cssInject', function() {
+	return gulp.src('./style.css')
+	.pipe(browserSync.stream());
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function() {
+	browserSync.reload();
+
+});

@@ -1705,3 +1705,62 @@ hr {
 .aside__icon .fa {
   font-size: 3em;
 }
+
+.kadra-container {
+  padding: 10px;
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 100px;
+ 
+
+}
+
+.kadra-box {
+  background-color: rgba(255, 255, 255, .75);
+  padding: 0 18px 1px 18px;
+
+}
+
+@media (min-width: 800px) {
+  .kadra-container {
+    margin-bottom: 30px;
+  }
+}
+
+.kadra-image {
+    border-radius: 80px;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto -75px auto;
+    position: relative;
+    top: -75px;
+    border: 6px solid rgba(255, 255, 255, .8);
+}
+
+.kadra-image img {
+  border: none!important;
+  border-radius: 0;
+  transition: all 1s ease-in-out;
+  padding: 0;
+  background-color: inherit;
+
+}
+
+.kadra-image img:hover {
+  transform: scale(1.35);
+  }
+
+.kadra-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 5px;
+  }
+
+.kadra-text {
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  margin: .25rem 0 1rem 0;
+}

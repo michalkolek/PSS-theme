@@ -1,17 +1,13 @@
 <?php 
 
-get_header('posts-n-pages'); ?>
+get_header();
+
+get_sidebar(); 
+
+get_template_part ('content'); 
+
+get_footer(); 
+
+?>
 
 
-				
-				<?php 
-
-					if (have_posts()) :
-						$count = 1; 
-					while (have_posts()) : the_post();  ?>
-
-					<?php get_template_part ('content'); ?>
-
-					<?php get_sidebar(); ?>
-
-					<?php get_footer(); ?>
