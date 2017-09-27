@@ -46,9 +46,16 @@ else {
 
 <?php if ( 2 === $count ) { ?>
 		<div class="main-content-advert">
-			<p>Lorem ipsum</p>		
-			<p>Lorem impsum</p>
+			<p>Jakas reklama</p>		
+			<hr>
+		</div>
+		
+<?php }
 
+if ( 4 === $count ) { ?>
+		<div class="main-content-advert">
+			<p>Jakas reklama</p>		
+			<hr>
 		</div>
 		
 <?php }

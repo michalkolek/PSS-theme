@@ -33,7 +33,8 @@ function pss_theme_setup() {
 	// Navigation Menus
 		register_nav_menus(array(
 		'primary' => __( 'Primary Menu'),
-		'footer' => __( 'Footer Menu'),
+		'sidebar' => __( 'Sidebar Menu'),
+		'footer' => __( 'Footer Menu')
 		));
 
 	

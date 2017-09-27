@@ -6,7 +6,8 @@ get_sidebar();
 
 ?>
 
-<div class="row kadra-container">
+<?php echo apply_filters('the_content', get_post_field('post_content', $post_id=145));?>
+<div class="row kadra-container equal-height-at-medium">
 
 <?php
 $i = 1;

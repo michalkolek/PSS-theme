@@ -1764,3 +1764,16 @@ hr {
   font-size: 0.9375rem;
   margin: .25rem 0 1rem 0;
 }
+
+@media (min-width: 800px) {
+.equal-height-at-medium {
+   display: flex;
+  }
+
+  .equal-height-at-medium > div {
+  float: none;
+  display: flex;
+
+}
+}
+
