@@ -6,18 +6,27 @@
 
 
 <div class="post-content u-cf">
-	<?php if (has_post_thumbnail()) { ?>
-		<div class="post-thumbnail u-cf">
+	<?php if (in_category('7')) { 
+		
+	} 
+
+		elseif (has_post_thumbnail()) {  ?>
+			<div class="post-thumbnail u-cf">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail('small-thumbnail')  ?>
 			</a>
 		</div>
-	<?php } ?>
+		<?php } 
+
+		else {} ?>
 
 <h2 class="post">
 	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 </h2>
 <p class="post-info">
+	
+	<!-- TUTAJ DODAC IFA CZY MA KATEGORIE -->
+	
 	<i class="fa fa-folder-open" aria-hidden="true"></i> 
 		<?php 
 			$categories = get_the_category(); 
@@ -32,7 +41,13 @@
 			?>
 			|
 	<i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('j/m/Y'); ?>
+	<?php if (is_single()) { ?>
+	|
+	<i class="fa fa-print" aria-hidden="true">&nbsp;</i><a href="javascript:window.print()">Drukuj</a>
+	<?php } ?>
 </p>
+
+
 
 <?php the_content(); ?>
 
@@ -66,8 +81,11 @@ $count++; ?>
 </div>
 
 
-<?php endwhile;
-	else :
+<?php endwhile; ?>
+
+<div class="pagination-links"><p><?php echo paginate_links(); ?> </p></div>
+
+	<?php else :
 		echo '<p> No Content found</p>';
 
 	endif; ?>

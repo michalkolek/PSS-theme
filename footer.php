@@ -1,33 +1,7 @@
    </article>
     </div>   </div> </div>
 
-    
-                      <div class="aside__column-nav show-me-mobile">
-                          <div class="aside__box aside__schedule">
-                            <div class="aside__icon"><i class="fa fa-3x fa-calendar" aria-hidden="true"></i></div>
-                            <div class="aside__box-content">Plan lekcji</div>
-                        </div>
-                      <div class="aside__box aside__payments">
-                            <div class="aside__icon"><i class="fa fa-3x fa-money" aria-hidden="true"></i></div>
-                            <div class="aside__box-content">Płatności</div>
-                        </div>
-                        <div class="aside__box aside__car-park">
-                            <div class="aside__icon"><i class="fa fa-3x fa-car" aria-hidden="true"></i></div>
-                            <div class="aside__box-content">Parking</div>
-                        </div>
-                        <div class="aside__box aside__plan">
-                            <div class="aside__icon"><i class="fa fa-3x fa-map" aria-hidden="true"></i></div>
-                            <div class="aside__box-content">Plan szkoły</div>
-                        </div>
-                            <div class="aside__box aside__extra-classes">
-                            <div class="aside__icon"><i class="fa fa-3x fa-futbol-o" aria-hidden="true"></i></div>
-                            <div class="aside__box-content">Zajęcia pozalekcyjne</div>
-                        </div>
-                        </div>
-                    
-
-
-<footer class="footer">
+    <footer class="footer">
       <div class="wrapper">
           <div class="footer__partners">
              <a href="https://www.senat.gov.pl">
@@ -50,12 +24,13 @@
                   ?>
 
 
-          <?php wp_nav_menu(); ?>
+          <?php wp_nav_menu($args); ?>
         </div>
         </div>
         <div class="footer__copyright row">
         <div class="twelve columns">
             <p>Copyright &copy;<?php echo date('Y'); ?> PSS. All rights reserved</p>
+            <p style="text-align: right; padding-right: 15px">Proudly donated by Michał Kolek from <a href="http://www.WebServiceDev.co.uk" alt="link do www.webservicedev.co.uk">www.WebServiceDev.co.uk</a></p>
         </div></div>
     </footer>
 
