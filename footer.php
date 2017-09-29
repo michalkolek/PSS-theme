@@ -34,6 +34,10 @@
         </div></div>
     </footer>
 
+    <div class="modal">
+      <h2>Get in Touch</h2>
+    </div>
+
         <script src="App.js"></script>
         <script> function restoreAndSkipContent() {
   			var hidden = document.getElementsByClassName('skip-me')[0];

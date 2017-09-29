@@ -25,7 +25,7 @@
 </h2>
 <p class="post-info">
 	
-	<!-- TUTAJ DODAC IFA CZY MA KATEGORIE -->
+
 
 	<?php if (in_category('7')) { ?>
 			<i class="fa fa-folder-open" aria-hidden="true"></i> 

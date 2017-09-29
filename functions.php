@@ -97,7 +97,16 @@ add_action('customize_register', 'pss_events');
 
 
 
+// Exclude Kadra category from main loop
 
+function pss_exclude_cat( $query ) {
 
+	if ( $query->is_main_query() && ($query->is_home() OR $query->is_archive()) ) {
+
+		$query->set( 'cat', '-7' );
+	}
+}
+
+add_action( 'pre_get_posts', 'pss_exclude_cat' );
 
 ?>
