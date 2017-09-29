@@ -35,10 +35,30 @@
     </footer>
 
     <div class="modal">
-      <h2>Get in Touch</h2>
+      <div class="modal__inner">
+      <h2><i class="fa fa-envelope" aria-hidden="true"></i>  Kontakt  <i class="fa fa-phone-square" aria-hidden="true"></i></h2>
+
+      <div class="row container">
+      <div class="six columns">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d832.7277580509698!2d-0.22281160979302647!3d52.58180610884098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x19aebadd738fdc20!2sNicolas+Copernicus+Polish+Saturday+School+in+Peterborough!5e0!3m2!1spl!2suk!4v1506682679164" width="600" height="450" frameborder="0" style="border:1px solid black" allowfullscreen></iframe>
+</div>
+      
+<div class="six columns">
+         <div class="social-icons">
+        <a href="#" class="social-icons__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" class="social-icons__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" class="social-icons__icon"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <a href="#" class="social-icons__icon"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="#" class="social-icons__icon"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+    </div>
     </div>
 
-        <script src="App.js"></script>
+
+    </div></div>
+      <div class="modal__close">X</div>
+    </div>
+
+        <script src="/App.js"></script>
         <script> function restoreAndSkipContent() {
   			var hidden = document.getElementsByClassName('skip-me')[0];
   			hidden.classList.add('unhide');
