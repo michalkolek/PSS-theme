@@ -26,6 +26,23 @@
 <p class="post-info">
 	
 	<!-- TUTAJ DODAC IFA CZY MA KATEGORIE -->
+
+	<?php if (in_category('7')) { ?>
+			<i class="fa fa-folder-open" aria-hidden="true"></i> 
+			
+			<a href="<?php echo get_page_link(145); ?>">Kadra</a>
+
+			|
+
+			<i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('j/m/Y'); ?>
+		
+				<?php if (is_single()) { ?>
+				|
+				<i class="fa fa-print" aria-hidden="true">&nbsp;</i><a href="javascript:window.print()">Drukuj</a>
+				<?php } ?>
+
+<?php }	 else {	?>	
+
 	
 	<i class="fa fa-folder-open" aria-hidden="true"></i> 
 		<?php 
@@ -44,7 +61,9 @@
 	<?php if (is_single()) { ?>
 	|
 	<i class="fa fa-print" aria-hidden="true">&nbsp;</i><a href="javascript:window.print()">Drukuj</a>
-	<?php } ?>
+	<?php } } ?>
+
+
 </p>
 
 
