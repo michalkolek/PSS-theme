@@ -1792,6 +1792,14 @@ hr {
   text-align: center;
   opacity: 0;
   visibility: hidden;
+  transform: scale(1.2);
+  transition: all .3s ease-out;
+}
+
+.modal--is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
 }
 
 .modal__inner {
@@ -1805,6 +1813,7 @@ hr {
   font-size: 5rem;
   font-weight: 300;
   color: #‎A8a8a8;
+  font-weight: 500;
 
 
 
@@ -1843,8 +1852,8 @@ transition: all .5s ease-in-out;
     transform-origin: 100% 0;
     color: grey;
     cursor: pointer;
+    font-weight: 700;
 }
-
 
 .modal__close:hover {
      color:#DC143C;
