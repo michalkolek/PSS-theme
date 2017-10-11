@@ -1121,22 +1121,33 @@ p {
                     transform: rotate(-45deg) scaleX(1.25) translateY(1px);
         }
 
-.site-header .facebook-contact-icon {
+.site-header .contact-facebook {
         visibility: hidden;
         display: none;
     }
 
 @media (min-width: 1100px) {
 
-.site-header .facebook-contact-icon {
+.site-header .contact-facebook {
             visibility: visible;
             position: absolute;
-            top: 425%;
-            right: 0%;
-            color: black;
-            display: block
+            top: 540%;
+            right: -1%;
+            color: blue;
+            display: block;
+
     }
         }
+
+.site-header .contact-facebook a {
+  background-color: transparent;
+}
+
+.site-header .contact-facebook a .facebook-contact-icon {
+  color: black;
+  font-size: 5rem;
+}
+
 
 .site-header__menu-content {
         opacity: 0;
@@ -1359,7 +1370,8 @@ display: block;
 		width: 100%;
 		text-align: center;
 		color: #F2F2F2;
-	}
+    text-shadow: 1px 1px grey;
+  }
 
 .main-section {
 	position: relative;
@@ -1429,10 +1441,12 @@ h5 {
 .post-content h2 a {
   color: red;
   text-decoration: none;
+  transition: all .3s ease-in-out;
+  display: inline-block;
 }
 
 .post-content h2 a:hover {
-  font-weight: 500;
+  transform: scale(1.05);
   
 }
 
@@ -1536,7 +1550,7 @@ h5 {
 .menu-nawigacja-boczna-container a {
   text-decoration: none;
   color: #333333;
-  padding-left: 50px;
+  padding-left: 0px;
   padding-bottom: 15px;
   display: block;
   transition: all .5s ease-in-out;
@@ -1547,7 +1561,8 @@ h5 {
 }
 
 .menu-nawigacja-boczna-container a:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
+  transform-origin: 0% 50%;
 }
 
 .footer {
@@ -1820,14 +1835,17 @@ hr {
 }
 
 .social-icons {
-margin-left: 200px;
 margin-top: 30px;
+margin-bottom: 50px;
+margin-right: -20px;
 }
 
 .social-icons__icon {
-display: block;
+display: inline;
 max-width: 50px;
-margin: 10px 0 30px 0;
+margin: 10px 0px 0px 0;
+padding-right: 20px;
+
 }
 
 .social-icons__icon .fa {

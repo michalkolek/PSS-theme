@@ -54,7 +54,7 @@ add_action('after_setup_theme', 'pss_theme_setup');
 function pss_events($wp_customize) {
 	$wp_customize->add_section('pss-events-section', array(
 		'title' => 'Najblizsze wydarzenia',
-		'priority' => 1
+		'priority' => 2
 	));
 
 	$wp_customize->add_setting('pss-events-setting-headline', array(
@@ -109,4 +109,75 @@ function pss_exclude_cat( $query ) {
 
 add_action( 'pre_get_posts', 'pss_exclude_cat' );
 
+
+// Add Large Hero H1 and H3 text - tytuł i podtytuł głównego baneru
+// Customize Color of Large Hero H1 and H3 texts - kolor
+
+function pss_large_hero_callout($wp_customize) {
+	
+	$wp_customize->add_section ('pss-large-hero-callout-section', array(
+		'title' => "Tekst i kolory głównego baneru",
+		'priority' => 1
+		
+	));
+
+	$wp_customize->add_setting ('pss-large-hero-callout-setting', array(
+		'default' => 'Witaj w Polskiej szkole sobotniej'
+
+	));
+
+	$wp_customize->add_control ( new WP_Customize_Control($wp_customize, 'pss-large-hero-callout-control', array(
+		'label' => 'Tytuł',
+		'section' => 'pss-large-hero-callout-section',
+		'settings' => 'pss-large-hero-callout-setting'
+
+	)));
+
+	$wp_customize->add_setting ('pss-large-hero-callout-h3-setting', array(
+		'default' => 'w Peterborough'
+	));
+
+	$wp_customize->add_control ( new WP_Customize_Control($wp_customize, 'pss-large-hero-callout-h3-control', array(
+		'label' => 'Podtytuł',
+		'section' => 'pss-large-hero-callout-section',
+		'settings' => 'pss-large-hero-callout-h3-setting'
+	)));
+
+// Colors
+
+	$wp_customize->add_setting ('pss-large-hero-callout-color-setting', array(
+		'default' => '#F2F2F2'
+		
+	));
+
+	$wp_customize->add_control ( new WP_Customize_Color_Control($wp_customize, 'pss-large-hero-callout-color-control', array(
+		'label' => 'Kolor tytułu',
+		'section' => 'pss-large-hero-callout-section',
+		'settings' => 'pss-large-hero-callout-color-setting'
+
+	)));
+
+	$wp_customize->add_setting ('pss-large-hero-callout-h3-color-setting', array(
+		'default' => '#F2F2F2',
+		'transport' => 'refresh'
+	));
+
+	$wp_customize->add_control ( new WP_Customize_Color_Control($wp_customize, 'pss-large-hero-callout-h3-color-control', array(
+		'label' => 'Kolor podtytułu',
+		'section' => 'pss-large-hero-callout-section',
+		'settings' => 'pss-large-hero-callout-h3-color-setting'
+
+	)));
+
+
+}
+
+
+add_action('customize_register', 'pss_large_hero_callout');
+
+
+
+
+
 ?>
+

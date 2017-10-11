@@ -59,7 +59,7 @@
                 </div>
             </nav>
         </div>
-     <div class="contact-facebook"><i class="facebook-contact-icon fa fa-3x fa-facebook-official" aria-hidden="true"></i>
+     <div class="contact-facebook"><a href="https://pl-pl.facebook.com/schoolpl/"><i class="facebook-contact-icon fa fa-2x fa-facebook-official" aria-hidden="true"></i></a>
         </div>
       </div>
     </header>
@@ -70,8 +70,8 @@
             <img srcset="<?php bloginfo('template_url'); ?>/images/large-hero-small.jpg" alt="">
         </picture>
         <div class="large-hero__text-content">
-            <h1>Witaj w Polskiej szkole sobotniej</h1>
-            <h3>w Peterborough</h3>
+            <h1><?php echo get_theme_mod('pss-large-hero-callout-setting')?></h1>
+            <h3><?php echo get_theme_mod('pss-large-hero-callout-h3-setting')?></h3>
               
 
          </div>
