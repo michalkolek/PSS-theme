@@ -1,8 +1,8 @@
 /*
-Theme Name: Twenty Seventeen
-Theme URI: http://WebServiceDev
+Theme Name: PSS
+Theme URI: 
 Author: Michał Kolek
-Author URI: http://WebServiceDev
+Author URI: http://WebServiceDev.co.uk
 Version: 1.0
 */
 
@@ -511,9 +511,9 @@ template {
     padding: 0; }
 }
 
-/* For devices larger than 550px */
+/* For devices larger than 990px */
 
-@media (min-width: 550px) {
+@media (min-width: 768px) {
   .container {
     width: 80%; }
   .column,
@@ -974,16 +974,14 @@ p {
         background-color: rgba(47,85,114, .41);
     }
 
-@media (min-width: 880px) {
 
 .site-header {
-        background-color: rgba(47,85,114, .41)
-
+  background-color: rgba(47,85,114, .41)
 }
-	}
 
 .site-header__logo {
         padding-top: 5px;
+        padding-bottom: 10px;
 
     }
 
@@ -1013,17 +1011,6 @@ p {
         margin-top: -12px;
 
     }
-
-@media (min-width: 881px) and (max-width: 891px) {
-
-.site-header .small-image-flag {
-            position: absolute;
-            margin-left: 262px;
-            margin-top: -61px
-
-    }
-         
-        }
 
 .site-header .small-image-sun {
         max-width: 65px;
@@ -1088,21 +1075,12 @@ p {
             transition: transform .3s ease-out, -webkit-transform .3s ease-out;
         }
 
-@media only screen and (max-width: 879px) and (min-width: 11px) {
+@media only screen and (max-width: 990px) and (min-width: 11px) {
 
 .site-header__menu-icon {
             visibility: visible
     }
         }
-
-@media (min-width: 880px) {
-
-.site-header {
-        visibility: visible;
-        display: block
-
-}
-	}
 
 .site-header__menu-icon--close-x::before {
             -webkit-transform: rotate(45deg) scaleX(1.25);
@@ -1169,7 +1147,9 @@ p {
 .site-header__menu-content {
             width: 100%!important;
             opacity: 0;
+            padding-top: 16px;
             z-index: 1;
+            margin-top: -28px;
             padding-top: 0;
             -webkit-transform: scale(1);
                     transform: scale(1)
@@ -1179,17 +1159,15 @@ p {
 @media only screen and (min-width: 880px) {
 
 .site-header__menu-content {
-            margin-top: -28px;
+         margin-top: -28px;
             opacity: 1;
             z-index: 1;
-            padding-top: 0;
-            -webkit-transform: scale(1);
+           -webkit-transform: scale(1);
                     transform: scale(1);
             float: right;
             visibility: visible
     }
-            @clearfix;
-
+            
         }
 
 @media only screen and (min-width: 881px) {
@@ -1255,7 +1233,16 @@ display: block;
 
 
 
-@media (min-width: 880px) {
+@media (max-width: 991px) {
+
+.menu-nawigacja-glowna-container {
+  visibility: none;
+  display: hidden;
+}
+
+}
+
+@media (min-width: 991px) {
 
 .primary-nav {
 	display: inline;
@@ -1719,19 +1706,48 @@ hr {
   font-size: 3em;
 }
 
+h3 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+
+  h3 {
+    font-size: 3.0rem
+  }
+  
+}
+
 .kadra-container {
   padding: 10px;
   text-align: center;
   padding-top: 80px;
   margin-bottom: 100px;
- 
-
+  display: flex;
+  
 }
 
+
+.kadra-container > div {
+ display: flex;
+
+
+  
+}
+
+.kadra-box {
+   padding: 0 0 1px 0;
+   background-color: rgba(255, 255, 255, .75);
+ 
+  }
+
+
+@media (min-width: 990px) {
 .kadra-box {
   background-color: rgba(255, 255, 255, .75);
   padding: 0 18px 1px 18px;
 
+}
 }
 
 @media (min-width: 800px) {
@@ -1766,10 +1782,17 @@ hr {
 
 .kadra-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
+  margin: 2px;
+}
+
+@media (min-width: 990px) {
+.kadra-title {
+  font-size: 2.5rem;
   margin: 5px;
   }
+}
 
 .kadra-text {
   text-align: center;
@@ -1778,23 +1801,18 @@ hr {
   margin: .25rem 0 1rem 0;
 }
 
-@media (min-width: 800px) {
-.equal-height-at-medium {
-   display: flex;
-  }
-
-  .equal-height-at-medium > div {
-  float: none;
-  display: flex;
-
-}
-}
-
 .pagination-links p {
   text-align: center;
 }
 
 
+@media (min-width: 700px) {
+.modal-mobile {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+}
 
 .modal {
   position: fixed;
@@ -1804,7 +1822,7 @@ hr {
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   visibility: hidden;
   transform: scale(1.2);
@@ -1827,8 +1845,9 @@ hr {
 .modal h2 {
   font-size: 5rem;
   font-weight: 300;
-  color: #‎A8a8a8;
+  color: #‎a8a8a8;
   font-weight: 500;
+  text-align: center;
 
 
 

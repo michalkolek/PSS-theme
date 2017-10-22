@@ -146,7 +146,8 @@ function pss_large_hero_callout($wp_customize) {
 // Colors
 
 	$wp_customize->add_setting ('pss-large-hero-callout-color-setting', array(
-		'default' => '#F2F2F2'
+		'default' => '#F2F2F2',
+		'transport' => 'refresh'
 		
 	));
 
@@ -176,8 +177,46 @@ function pss_large_hero_callout($wp_customize) {
 add_action('customize_register', 'pss_large_hero_callout');
 
 
+// Output Customize CSS for large hero H1 and H 3
+
+function pss_customize_css() { ?>
+
+	<style type="text/css">
+	
+		.large-hero__text-content h1 {
+			color: <?php echo get_theme_mod('pss-large-hero-callout-color-setting'); ?>;
+		}
+
+		.large-hero__text-content h3 {
+			color: <?php echo get_theme_mod('pss-large-hero-callout-h3-color-setting'); ?>;
+		
+		}
+
+	</style>
+
+<?php }
+
+add_action ( 'wp_head', 'pss_customize_css' )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 ?>
-

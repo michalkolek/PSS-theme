@@ -70,8 +70,9 @@
             <img srcset="<?php bloginfo('template_url'); ?>/images/large-hero-small.jpg" alt="">
         </picture>
         <div class="large-hero__text-content">
-            <h1><?php echo get_theme_mod('pss-large-hero-callout-setting')?></h1>
-            <h3><?php echo get_theme_mod('pss-large-hero-callout-h3-setting')?></h3>
+           <h1><?php echo get_theme_mod('pss-large-hero-callout-setting')?></h1>
+           <h3><?php echo get_theme_mod('pss-large-hero-callout-h3-setting')?></h3>
+         
               
 
          </div>
