@@ -67,7 +67,7 @@
 
         <picture>
           <source srcset="<?php bloginfo('template_url'); ?>/images/4.jpg 848w" media="(min-width: 768px)">
-            <img srcset="<?php bloginfo('template_url'); ?>/images/large-hero-small.jpg" alt="">
+            <img srcset="<?php bloginfo('template_url'); ?>/images/large-hero-small-2.jpg" alt="">
         </picture>
         <div class="large-hero__text-content">
            <h1><?php echo get_theme_mod('pss-large-hero-callout-setting')?></h1>
