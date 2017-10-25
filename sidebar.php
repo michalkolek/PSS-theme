@@ -23,7 +23,7 @@
 
                   $args = array (
                     'theme_location' => 'sidebar',
-                    'after' => '<hr>'
+                    'after' => '<hr class="sidebar-hr">'
 
                   ); 
 
