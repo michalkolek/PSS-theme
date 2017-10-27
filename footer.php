@@ -109,15 +109,8 @@
             </div>
           </div>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
           <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/App3.js"></script>
-          <script type="text/javascript"> function restoreAndSkipContent() {
-           var hidden = document.getElementsByClassName('skip-me')[0];
-           hidden.classList.add('unhide');
-           window.scroll(500, hidden.clientHeight-80);
-         };
-         restoreAndSkipContent();
-       </script>
+    
     <!-- End Document
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <?php wp_footer(); ?>

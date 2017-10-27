@@ -1040,8 +1040,8 @@ p {
         position: absolute;
         top: 20px;
         right: 20px;
-        z-index: 12;
-        visibility: hidden;
+        z-index: 999;
+      
     }
 
 .site-header__menu-icon::before {
@@ -1089,10 +1089,11 @@ p {
             transition: transform .3s ease-out, -webkit-transform .3s ease-out;
         }
 
-@media only screen and (max-width: 990px) and (min-width: 11px) {
+@media (min-width: 990px) {
 
-.site-header__menu-icon {
-            visibility: visible
+.site-header__menu-icon:hover {
+  cursor: pointer;
+
     }
         }
 
@@ -1204,7 +1205,7 @@ p {
 .site-header__menu-content {
             margin-top: 0px;
             opacity: 1;
-            z-index: 1;
+            z-index: 9991;
             padding-top: 0;
             -webkit-transform: scale(1);
                     transform: scale(1);
@@ -1216,17 +1217,16 @@ p {
         }
 
 .site-header__menu-content--is-visible {
+            display: block;
+            visibility: visible;
             opacity: 1;
-            z-index: 1;
+            z-index: 9991;
             -webkit-transform: scale(1);
                     transform: scale(1);
         }
 
 .primary-nav {
-
 	width: 100%;
-	visibility: hidden;
-	display:none;
 	opacity: 0;
 	-webkit-transform: scale(.75);
 	        transform: scale(.75);
@@ -1240,13 +1240,10 @@ p {
       display: none;
       position: absolute;
       top: 60px;
-    
       -webkit-transform: scale(.95);
           transform: scale(.95);
            overflow: show;
-          
-
-  }
+}
 
  
 #menu-nawigacja-glowna li:hover .sub-menu {
@@ -1255,8 +1252,6 @@ display: block;
    overflow: show;
    padding-top: 50px;
    margin-top: -55px;
-
-
 }
 
 
@@ -1502,7 +1497,9 @@ display: block;
   .main-content h3  {
     font-size: 2.65rem; 
   }
-}@media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
   .main-content h3  {
     font-size: 2.85rem; 
   }

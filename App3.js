@@ -25,3 +25,19 @@ jQuery(document).keyup(function(e) {
 		jQuery(".modal").removeClass("modal--is-visible");
 	}
 });
+
+
+jQuery(document).ready(function() {
+	jQuery(".site-header__menu-icon").click(function() {
+		jQuery(".site-header__menu-content").toggleClass("site-header__menu-content--is-visible");
+    jQuery(".submenu").removeClass("submenu-on");
+    	});
+});
+    
+jQuery(document).ready(function()  {
+  	jQuery(".submenu-click").click(function() {
+		jQuery(".submenu").toggleClass("submenu-on");
+    });
+});
+
+
