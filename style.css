@@ -982,6 +982,7 @@ p {
 .site-header__logo {
   display: none;
   visibility: hidden;
+  position: relative;
 }
 
 .mmv {
@@ -994,7 +995,7 @@ p {
 
 @media (min-width: 360px) {
 .site-header__logo {
-        display: block;
+        display: inline-block;
         visibility: visible;
         padding-top: 5px;
         padding-bottom: 10px;
@@ -1006,15 +1007,6 @@ p {
     }
 
   }
-
-@media only screen and (max-width: 880px) and (min-width: 550px) {
-
-.site-header__logo {
-            width: 50%!important
-
-    }
-
-        }
 
 .site-header a {
         text-decoration: none;
@@ -1029,8 +1021,12 @@ p {
 
 .site-header .small-image-flag {
         position: absolute;
-        margin-left: -2px;
-        margin-top: -12px;
+       left: 262px;
+       bottom: 0;
+       right: 0;
+       top: -7px!important;
+
+
 
     }
 
@@ -1141,101 +1137,31 @@ p {
   font-size: 5rem;
 }
 
-
 .site-header__menu-content {
-        opacity: 0;
-        -webkit-transform: scale(.75);
-                transform: scale(.75);
-        -webkit-transform: background;
-                transform: background;
-        -webkit-transition: all .3s ease-out;
-        transition: all .3s ease-out;
-        z-index: -10;
-        position: relative;
-        margin-top: 20px;
-        text-align: center;
-        margin-left: 0;
+      display: none;
+    
     }
 
 
-@media (max-width: 549px)  {
+@media only screen and (min-width: 768px) {
+
   .site-header__menu-content {
-    visibility: hidden;
-    display: none;
-  }
-}
-
-@media (min-width: 550px) and (max-width: 555px) {
-  .small-image-flag {
-    left:274px;
-    top:15px;
-  }
-}
-
-@media only screen and (max-width: 880px) and (min-width: 550px) {
-
-.site-header__menu-content {
-            width: 100%!important;
-            opacity: 0;
-            padding-top: 16px;
-            z-index: 1;
-            margin-top: -28px;
-            padding-top: 0;
-            -webkit-transform: scale(1);
-                    transform: scale(1)
-    }
-        }
-
-@media only screen and (min-width: 880px) {
-
-.site-header__menu-content {
-         margin-top: -28px;
             opacity: 1;
             z-index: 1;
-           -webkit-transform: scale(1);
-                    transform: scale(1);
+                 -webkit-transform: scale(1);
+                transform: scale(1);
+                      -webkit-transform: background;
+                transform: background;
+        -webkit-transition: all .3s ease-out;
             float: right;
-            visibility: visible
+            visibility: visible;
+                transition: all .3s ease-out;
+        text-align: center;
+        margin-left: 0;
+        display: initial;
     }
             
         }
-
-@media only screen and (min-width: 881px) {
-
-.site-header__menu-content {
-            margin-top: 0px;
-            opacity: 1;
-            z-index: 9991;
-            padding-top: 0;
-            -webkit-transform: scale(1);
-                    transform: scale(1);
-            float: right;
-            visibility: visible
-    }
-            @clearfix;
-
-        }
-
-.site-header__menu-content--is-visible {
-            display: block;
-            visibility: visible;
-            opacity: 1;
-            z-index: 9991;
-            -webkit-transform: scale(1);
-                    transform: scale(1);
-        }
-
-.primary-nav {
-  width: 100%;
-  opacity: 0;
-  -webkit-transform: scale(.75);
-          transform: scale(.75);
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
-  z-index: -10;
-}
-
-
 .sub-menu {
       display: none;
       position: absolute;
@@ -1245,37 +1171,19 @@ p {
            overflow: show;
 }
 
+
+.menu-nawigacja-glowna-container > ul > li {
+  
+  display: inline-grid;
+}
  
 #menu-nawigacja-glowna li:hover .sub-menu {
-display: block;
+   display: block;
    transition: all .3s ease-out;
    overflow: show;
    padding-top: 50px;
    margin-top: -55px;
 }
-
-
-
-
-@media (max-width: 991px) {
-
-.menu-nawigacja-glowna-container {
-  visibility: none;
-  display: hidden;
-}
-
-}
-
-@media (min-width: 991px) {
-
-.primary-nav {
-  display: inline;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  padding-top: 0px
-}
-  }
 
 .primary-nav ul { 
     margin: 0;
@@ -1283,29 +1191,32 @@ display: block;
     margin-top: 9px;
   }
 
-
-
-@media only screen and (min-width: 880px) and (max-width: 880px) {
-
-.primary-nav ul {
-    
-  
-      margin-left: 350px!important
-  }
-      
+.primary-nav li {
+      display: inline-flex;
+   
     }
 
-.primary-nav li {
-    
-    list-style: none;
+
+
+.primary-nav a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 20px;
+    font-size: 2.5rem;
+    color: #FFF;
   }
 
-@media (min-width: 420px) {
 
-.primary-nav li {
-      display: inline-grid!important
+@media (min-width: 768px) {
+
+.primary-nav a {
+  margin: 0 10px 0 10px;  
   }
-    }
+  }
+
+
+
+/* Fancy, bouncy stuff START */
 
 @media (min-width: 880px) {
 
@@ -1316,7 +1227,7 @@ display: block;
              transform: perspective(1px) translateZ(0);
      padding: 0;
      list-style: none;
-    display: inline-block
+    display: inline-block;
   }
   }
 
@@ -1326,42 +1237,9 @@ display: block;
      -webkit-transition-timing-function: cubic-bezier(.45, 2.0, 0.32, -0.35);
              transition-timing-function: cubic-bezier(.45, 2.0, 0.32, -0.35);
 
-
   }
 
-.primary-nav a {
-    text-decoration: none;
-    display: block;
-    padding: 5px 20px;
-    font-size: 2.5rem;
-    color: #FFF;
-
-
-
-  }
-
-
-
-@media (min-width: 530px) {
-
-.primary-nav a {
-      margin-left: 10px
-
-
-
-  }
-  }
-
-.primary-nav-is-visible {
-  visibility: visible;
-  display: initial;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  }
-
-
-
+ /* Fancy, bouncy stuff END */ 
 
 
 .large-hero {
@@ -1800,6 +1678,16 @@ display: block;
 .footer__partners a:last-child {
         margin-right: 0px;
     }
+
+
+.footer__partners--text {
+  max-width: 500px;
+}
+
+.footer__partners--text p {
+  font-size: 1.25rem;
+}
+
 
 .footer__list {
        

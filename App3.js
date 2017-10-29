@@ -41,3 +41,9 @@ jQuery(document).ready(function()  {
 });
 
 
+function restoreAndSkipContent() {
+    var hidden = document.getElementsByClassName('skip-me')[0];
+    hidden.classList.add('unhide');
+    window.scroll(500, hidden.clientHeight-80);
+    }; 
+restoreAndSkipContent();

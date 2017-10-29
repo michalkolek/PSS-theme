@@ -32,9 +32,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <header class="site-header">
       <div class="wrapper">
-        <div class="row">
-        <a class="mmv" href="<?php echo home_url(); ?>">PSS</a>
-          <div class="four columns site-header__logo">
+        <div class="burrow">
+         <a class="mmv" href="<?php echo home_url(); ?>">PSS</a>
+          <div class="site-header__logo">
             <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
             <img class="small-image-flag" src="<?php bloginfo('template_url'); ?>/images/polska-flaga2.png" alt="">
            </div>
@@ -43,7 +43,7 @@
                   <div class="site-header__menu-icon__middle"></div>
             </div>
         
-        <div class="eight columns site-header__menu-content">
+        <div class="site-header__menu-content">
             <nav class="primary-nav">
               <div class="site-header__menu-content">
              

@@ -7,8 +7,9 @@ gulp.task('watch', function() {
 	browserSync.init({
 		notify: false,
 		browser: "chrome",
-		proxy: "localhost/pss"
-		
+		proxy: "localhost/pss",
+		tunnel: true,
+		tunnel: "szkola"		
 	});
 
 	watch('./*.php', function() {
