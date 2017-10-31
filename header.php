@@ -18,8 +18,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/nowe.css">
      
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -33,7 +31,7 @@
     <header class="site-header">
       <div class="wrapper">
         <div class="burrow">
-         <a class="mmv" href="<?php echo home_url(); ?>">PSS</a>
+         <a class="site-header__logo--mobile" href="<?php echo home_url(); ?>">PSS</a>
           <div class="site-header__logo">
             <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
             <img class="small-image-flag" src="<?php bloginfo('template_url'); ?>/images/polska-flaga2.png" alt="">
@@ -45,7 +43,7 @@
         
         <div class="site-header__menu-content">
             <nav class="primary-nav">
-              <div class="site-header__menu-content">
+              <div class="site-header__menu-content--inner">
              
                   <?php 
 
@@ -69,7 +67,7 @@
 
         <picture>
           <source srcset="<?php bloginfo('template_url'); ?>/images/4.jpg 848w" media="(min-width: 768px)">
-            <img srcset="<?php bloginfo('template_url'); ?>/images/large-hero-small-2.jpg" alt="">
+          <img srcset="<?php bloginfo('template_url'); ?>/images/large-hero-small-2.jpg" alt="">
         </picture>
         <div class="large-hero__text-content">
            <h1><?php echo get_theme_mod('pss-large-hero-callout-setting')?></h1>

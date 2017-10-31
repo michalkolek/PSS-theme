@@ -4,12 +4,11 @@ browserSync = require('browser-sync').create();
 
 gulp.task('watch', function() {
 
-	browserSync.init({
+	browserSync.init(null, {
 		notify: false,
 		browser: "chrome",
 		proxy: "localhost/pss",
-		tunnel: true,
-		tunnel: "szkola"		
+		port: 5000
 	});
 
 	watch('./*.php', function() {

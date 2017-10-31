@@ -29,15 +29,17 @@ jQuery(document).keyup(function(e) {
 
 jQuery(document).ready(function() {
 	jQuery(".site-header__menu-icon").click(function() {
-		jQuery(".site-header__menu-content").toggleClass("site-header__menu-content--is-visible");
-    jQuery(".submenu").removeClass("submenu-on");
+		jQuery(".site-header__menu-content--inner").slideToggle("site-header__menu-content--inner-on");
+		jQuery(".site-header__menu-icon").toggleClass("site-header__menu-icon--close-x");
     	});
 });
-    
-jQuery(document).ready(function()  {
-  	jQuery(".submenu-click").click(function() {
-		jQuery(".submenu").toggleClass("submenu-on");
-    });
+
+jQuery(document).ready(function() {
+	jQuery('.menu-item-has-children').click(function() {
+		 $(this).children('ul').slideToggle();
+
+	});
+
 });
 
 

@@ -209,14 +209,4 @@ add_action ( 'wp_head', 'pss_customize_css' )
 
 
 
-
-
-
-
-
-
-
-
-
-
 ?>

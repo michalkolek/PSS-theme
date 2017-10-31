@@ -17,7 +17,7 @@
                                                 <p>jakas reklama</p>
                                               </div>
 
-                  <div class="hide-me-mobile">
+                  
                       <div class="aside__column-nav">
                   <?php 
 
@@ -34,7 +34,7 @@
                         </div>
 
 
-                                               </div>
+                                            
 
                                             
                                               <div class="aside__advert">
