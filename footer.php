@@ -4,16 +4,24 @@
 </div>
 <footer class="footer">
   <div class="wrapper">
-    <div class="footer__partners">
-      <a href="https://www.senat.gov.pl">
-        <img src="<?php bloginfo('template_url'); ?>/images/godlo_z_podpisem2.jpg" alt="Godło senatu RP">
-      </a>
-      <a href="http://www.wspolnotapolska.org.pl/">
-        <img src="<?php bloginfo('template_url'); ?>/images/wspolnota-polska-logo.jpg" alt="Logo Wspólnoty Polskiej">
-      </a>
-      <a href="www.polska-szkola.pl">
+    <div class="footer__partners u-cf">
+    <div class="footer__partners__logos">
+      <a href="http://www.polskamacierz.org">
+        <img src="<?php bloginfo('template_url'); ?>/images/polska-macierz-szkolna-logo.gif" alt="Logo polskiej macierzy szkolnej">
+      </a>    
+      <a href="http://www.polska-szkola.pl">
         <img src="<?php bloginfo('template_url'); ?>/images/logo-psk-small.png" alt="Logo Polskiej Szkoły">
       </a>
+       <a href="https://www.senat.gov.pl">
+        <img src="<?php bloginfo('template_url'); ?>/images/godlo_z_podpisem2.jpg" alt="Godło senatu RP">
+      </a>
+      <a href="http://www.msz.gov.pl/">
+        <img src="<?php bloginfo('template_url'); ?>/images/logotypMSZ_A_kolor2.jpg" alt="Logotyp MSZ">
+      </a>
+          <a href="http://www.wspolnotapolska.org.pl/">
+        <img src="<?php bloginfo('template_url'); ?>/images/wspolnota-polska-logo.jpg" alt="Logo Wspólnoty Polskiej">
+      </a> 
+      </div>  
       <div class="footer__partners--text">
         <p>Szkoła dofinansowana od Stowarzyszenia „Wspólnota Polska” ze środków Kancelarii Senatu RP w ramach opieki nad Polonią i Polakami za granicą w 2016 r.
         </p>

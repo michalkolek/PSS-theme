@@ -2075,14 +2075,14 @@ li.menu-item-has-children>a {
 @media (min-width: 880px) {
 
     .footer__partners {
-        width: auto
+  
     }
 }
 
 .footer__partners img {
     background-color: #FFF;
-    width: 125px;
-    height: auto;
+    max-height: 150px;
+    width: auto;
     vertical-align: middle;
     border: 2px solid #F2F2F2;
     margin-right: 25px;
@@ -2101,28 +2101,16 @@ li.menu-item-has-children>a {
     margin-right: 0px;
 }
 
-
-.footer__partners--text {
-    max-width: 500px;
-}
-
 .footer__partners--text p {
     font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 
 
 .footer ul {
     text-align: center;
-    padding-top: 220px;
-}
-
-@media (min-width: 880px) {
-
-    .footer ul {
-        text-align: left;
-        padding-top: 99px
-    }
 }
 
 .footer li {
