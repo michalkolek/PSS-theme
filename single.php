@@ -1,6 +1,6 @@
 <?php 
 
-get_header('posts-n-pages'); 
+get_header(); 
 
 get_sidebar(); 
 

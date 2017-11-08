@@ -8,7 +8,9 @@ gulp.task('watch', function() {
 		notify: false,
 		browser: "chrome",
 		proxy: "localhost/pss",
-		port: 5000
+		port: 5000,
+		tunnel: true,
+		tunnel: "szkola"
 	});
 
 	watch('./*.php', function() {

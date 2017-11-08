@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
-
 <head>
-    <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title><?php bloginfo('name'); ?></title>
+
+    <meta charset="UTF-8">
+    <title><?php bloginfo('name');?> <?php wp_title(); ?></title>
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     
-    <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-   <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <header class="site-header">
+ 
+    <header class="site-header site-header--scroll-up">
       <div class="wrapper">
         <div class="burrow">
          <a class="site-header__logo--mobile" href="<?php echo home_url(); ?>">PSS</a>
           <div class="site-header__logo">
             <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-            <img class="small-image-flag" src="<?php bloginfo('template_url'); ?>/images/polska-flaga2.png" alt="">
+            <img class="small-image-flag" src="<?php bloginfo('template_url'); ?>/images/polska-flaga2.png" alt="Polska flaga logo">
            </div>
 
                <div class="site-header__menu-icon">
@@ -63,11 +50,16 @@
         </div>
       </div>
     </header>
+     <?php if ( is_home() ) { ?> 
      <div class="large-hero">
+     <?php } 
+      else { ?>
+        <div class="large-hero skip-me">
+       <?php } ?>
 
         <picture>
           <source srcset="<?php bloginfo('template_url'); ?>/images/4.jpg 848w" media="(min-width: 768px)">
-          <img srcset="<?php bloginfo('template_url'); ?>/images/large-hero-small-2.jpg" alt="">
+          <img srcset="<?php bloginfo('template_url'); ?>/images/large-hero-small-2.jpg" alt="Ołówki">
         </picture>
         <div class="large-hero__text-content">
            <h1><?php echo get_theme_mod('pss-large-hero-callout-setting')?></h1>
