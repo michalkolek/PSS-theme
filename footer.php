@@ -4,30 +4,54 @@
 </div>
 <footer class="footer">
   <div class="wrapper">
+
     <div class="footer__partners u-cf">
     <div class="footer__partners__logos">
-      <a href="http://www.polskamacierz.org">
-        <img src="<?php bloginfo('template_url'); ?>/images/polska-macierz-szkolna-logo.gif" alt="Logo polskiej macierzy szkolnej">
-      </a>    
-      <a href="http://www.polska-szkola.pl">
-        <img src="<?php bloginfo('template_url'); ?>/images/logo-psk-small.png" alt="Logo Polskiej Szkoły">
-      </a>
-       <a href="https://www.senat.gov.pl">
-        <img src="<?php bloginfo('template_url'); ?>/images/godlo_z_podpisem2.jpg" alt="Godło senatu RP">
-      </a>
-      <a href="http://www.msz.gov.pl/">
-        <img src="<?php bloginfo('template_url'); ?>/images/logotypMSZ_A_kolor2.jpg" alt="Logotyp MSZ">
-      </a>
-          <a href="http://www.wspolnotapolska.org.pl/">
-        <img src="<?php bloginfo('template_url'); ?>/images/wspolnota-polska-logo.jpg" alt="Logo Wspólnoty Polskiej">
-      </a> 
+
+      <?php if (get_theme_mod ( 'pss-partners-logos-link-1-setting' ) && get_theme_mod( 'pss-partners-logos-image-1-setting' ) ) { ?>
+       <a href="<?php echo get_theme_mod('pss-partners-logos-link-1-setting');?>">
+         <img src="<?php echo wp_get_attachment_url(get_theme_mod('pss-partners-logos-image-1-setting')); ?>">
+       </a> 
+       <?php }
+
+       if (get_theme_mod ( 'pss-partners-logos-link-2-setting' ) && get_theme_mod( 'pss-partners-logos-image-2-setting' ) ) { ?>
+       <a href="<?php echo get_theme_mod('pss-partners-logos-link-2-setting');?>">
+         <img src="<?php echo wp_get_attachment_url(get_theme_mod('pss-partners-logos-image-2-setting')); ?>">
+       </a> 
+       <?php }
+
+      if (get_theme_mod ( 'pss-partners-logos-link-3-setting' ) && get_theme_mod( 'pss-partners-logos-image-3-setting' ) ) { ?>
+       <a href="<?php echo get_theme_mod('pss-partners-logos-link-3-setting');?>">
+         <img src="<?php echo wp_get_attachment_url(get_theme_mod('pss-partners-logos-image-3-setting')); ?>">
+       </a> 
+       <?php }
+
+      if (get_theme_mod ( 'pss-partners-logos-link-4-setting' ) && get_theme_mod( 'pss-partners-logos-image-4-setting' ) ) { ?>
+       <a href="<?php echo get_theme_mod('pss-partners-logos-link-4-setting');?>">
+         <img src="<?php echo wp_get_attachment_url(get_theme_mod('pss-partners-logos-image-4-setting')); ?>">
+       </a> 
+       <?php } 
+
+        if (get_theme_mod ( 'pss-partners-logos-link-5-setting' ) && get_theme_mod( 'pss-partners-logos-image-5-setting' ) ) { ?>
+       <a href="<?php echo get_theme_mod('pss-partners-logos-link-5-setting');?>">
+         <img src="<?php echo wp_get_attachment_url(get_theme_mod('pss-partners-logos-image-5-setting')); ?>">
+       </a> 
+       <?php }
+
+     if (get_theme_mod ( 'pss-partners-logos-link-6-setting' ) && get_theme_mod( 'pss-partners-logos-image-6-setting' ) ) { ?>
+       <a href="<?php echo get_theme_mod('pss-partners-logos-link-6-setting');?>">
+         <img src="<?php echo wp_get_attachment_url(get_theme_mod('pss-partners-logos-image-6-setting')); ?>">
+       </a> 
+       <?php } ?>
+
       </div>  
       <div class="footer__partners--text">
         <p>Szkoła dofinansowana od Stowarzyszenia „Wspólnota Polska” ze środków Kancelarii Senatu RP w ramach opieki nad Polonią i Polakami za granicą w 2016 r.
         </p>
       </div>
     </div>
-  </div>
+
+
   <div class="footer__list">
     <?php   
     $args = array (
@@ -46,6 +70,7 @@
       </p>
     </div>
   </div>
+    </div>
 </footer>
   <div class="modal">
     <div class="modal__inner">

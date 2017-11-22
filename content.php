@@ -2,7 +2,7 @@
 $count = 1;
 if (have_posts()) :
 	while (have_posts()) : the_post(); ?>
-	<div class="post-content u-cf">
+<div class="post-content u-cf">
 	<h2 class="post">
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 	</h2>
@@ -50,9 +50,13 @@ if (have_posts()) :
 	<?php if (is_single() OR is_page()) {}
 	else {
 		?> 
-		<hr>
+		
 		<?php } ?>
-		<?php if ( 2 === $count ) { ?>
+
+	</div>
+	<hr>
+
+			<?php if ( 2 === $count ) { ?>
 		<?php 
 		if (get_theme_mod ( 'pss-ads-main-1-link-setting' ) && get_theme_mod( 'pss-ads-main-1-image-setting' ) ) {
 			?> 
@@ -83,7 +87,8 @@ if (have_posts()) :
 		if ( 4 === $count ) { ?>
 		<?php 
 		if (get_theme_mod ( 'pss-ads-main-2-link-setting' ) && get_theme_mod( 'pss-ads-main-2-image-setting' ) ) {
-			?> 
+			?>
+			<hr> 
 			<div class="main-content-advert"> 
 				<p class="advert--italic advert--main--checkbox">--- Reklama ---</p>
 				<p>
@@ -101,14 +106,14 @@ if (have_posts()) :
 						<?php echo get_theme_mod('pss-ads-main-2-link-text-setting'); ?>
 					</a>
 				</p>
-				<hr>
+				
 			</div>
+			<hr>
 			<?php }
 			else {
 			} 
 		}
 		$count++; ?>
-	</div>
 <?php endwhile; ?>
 <div class="pagination-links"><p><?php echo paginate_links(); ?> </p></div>
 <?php else :

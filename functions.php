@@ -126,8 +126,8 @@ function pss_ads ( $wp_customize ) {
 		'label' => 'Reklama boczna nr 1 - obrazek',
 		'section' => 'pss-ads-section',
 		'settings' => 'pss-ads-sidebar-1-image-setting',
-		'width' => 270,
-		'height' => 200		
+		'width' => 200,
+		'flex_height' => true	
 	)));
 
 	// Sidebar 2nd text for the advertisment, if advertistment is not available
@@ -157,8 +157,8 @@ function pss_ads ( $wp_customize ) {
 		'label' => 'Reklama boczna nr 2 - obrazek',
 		'section' => 'pss-ads-section',
 		'settings' => 'pss-ads-sidebar-2-image-setting',
-		'width' => 270,
-		'height' => 200		
+		'width' => 200,
+		'flex_height' => true
 	)));
 }
 	add_action('customize_register', 'pss_ads');
@@ -209,8 +209,8 @@ function pss_ads ( $wp_customize ) {
 		'label' => 'Reklama glówna nr 1 - obrazek',
 		'section' => 'pss-ads-main-section',
 		'settings' => 'pss-ads-main-1-image-setting',
-		'width' => 875,
-		'height' => 200		
+		'width' => 600,
+		'flex_height' => true	
 	)));
 
 	// Main 2nd text for the advertisment, if advertistment is not available
@@ -240,8 +240,8 @@ function pss_ads ( $wp_customize ) {
 		'label' => 'Reklama glówna nr 2 - obrazek',
 		'section' => 'pss-ads-main-section',
 		'settings' => 'pss-ads-main-2-image-setting',
-		'width' => 875,
-		'height' => 200		
+		'width' => 600,
+		'flex_height' => true	
 	)));
 }
 add_action('customize_register', 'pss_ads_main');
@@ -317,6 +317,141 @@ function pss_customize_css() { ?>
 	</style>
 <?php }
 add_action ( 'wp_head', 'pss_customize_css' );
+
+// PARTNERS LOGOS
+function pss_partners_logos($wp_customize) {
+	$wp_customize->add_section ('pss-partners-logos-section', array(
+		'title' => "Partnerzy strony",
+		'priority' => 5
+	));
+
+// IMAGE 1
+	$wp_customize->add_setting ('pss-partners-logos-image-1-setting');
+	$wp_customize->add_control ( new WP_Customize_Cropped_Image_Control ( $wp_customize, 'pss-partners-logos-image-1-control', array(
+		'label' => 'Obrazek 1',
+		'section' => 'pss-partners-logos-section',
+		'settings' => 'pss-partners-logos-image-1-setting',
+		'height' => 150,
+		'flex_width' => true
+	)));
+
+// LINK 1
+	$wp_customize->add_setting('pss-partners-logos-link-1-setting');
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-partners-logos-link-1-control', array(
+		'label' => 'Obrazek 1 - link',
+		'section' => 'pss-partners-logos-section',
+		'description' => 'Link musi posiadać http:// lub https:// oraz www - przykładowo: http://www.google.com',
+		'settings' => 'pss-partners-logos-link-1-setting',
+		'type' => 'url'	
+	)));	
+
+// IMAGE 2
+	$wp_customize->add_setting ('pss-partners-logos-image-2-setting');
+	$wp_customize->add_control ( new WP_Customize_Cropped_Image_Control ( $wp_customize, 'pss-partners-logos-image-2-control', array(
+		'label' => 'Obrazek 2',
+		'section' => 'pss-partners-logos-section',
+		'settings' => 'pss-partners-logos-image-2-setting',
+		'height' => 150,
+		'flex_width' => true
+	)));
+
+// LINK 2
+	$wp_customize->add_setting('pss-partners-logos-link-2-setting');
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-partners-logos-link-2-control', array(
+		'label' => 'Obrazek 2 - link',
+		'section' => 'pss-partners-logos-section',
+		'description' => 'Link musi posiadać http:// lub https:// oraz www - przykładowo: http://www.google.com',
+		'settings' => 'pss-partners-logos-link-2-setting',
+		'type' => 'url'	
+	)));	
+
+// IMAGE 3
+	$wp_customize->add_setting ('pss-partners-logos-image-3-setting');
+	$wp_customize->add_control ( new WP_Customize_Cropped_Image_Control ( $wp_customize, 'pss-partners-logos-image-3-control', array(
+		'label' => 'Obrazek 3',
+		'section' => 'pss-partners-logos-section',
+		'settings' => 'pss-partners-logos-image-3-setting',
+		'height' => 150,
+		'flex_width' => true
+	)));
+
+// LINK 3
+	$wp_customize->add_setting('pss-partners-logos-link-3-setting');
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-partners-logos-link-3-control', array(
+		'label' => 'Obrazek 3 - link',
+		'section' => 'pss-partners-logos-section',
+		'description' => 'Link musi posiadać http:// lub https:// oraz www - przykładowo: http://www.google.com',
+		'settings' => 'pss-partners-logos-link-3-setting',
+		'type' => 'url'	
+	)));	
+
+// IMAGE 4
+	$wp_customize->add_setting ('pss-partners-logos-image-4-setting');
+	$wp_customize->add_control ( new WP_Customize_Cropped_Image_Control ( $wp_customize, 'pss-partners-logos-image-4-control', array(
+		'label' => 'Obrazek 4',
+		'section' => 'pss-partners-logos-section',
+		'settings' => 'pss-partners-logos-image-4-setting',
+		'height' => 150,
+		'flex_width' => true
+	)));
+
+// LINK 4
+	$wp_customize->add_setting('pss-partners-logos-link-4-setting');
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-partners-logos-link-4-control', array(
+		'label' => 'Obrazek 4 - link',
+		'section' => 'pss-partners-logos-section',
+		'description' => 'Link musi posiadać http:// lub https:// oraz www - przykładowo: http://www.google.com',
+		'settings' => 'pss-partners-logos-link-4-setting',
+		'type' => 'url'	
+	)));	
+
+// IMAGE 5
+	$wp_customize->add_setting ('pss-partners-logos-image-5-setting');
+	$wp_customize->add_control ( new WP_Customize_Cropped_Image_Control ( $wp_customize, 'pss-partners-logos-image-5-control', array(
+		'label' => 'Obrazek 5',
+		'section' => 'pss-partners-logos-section',
+		'settings' => 'pss-partners-logos-image-5-setting',
+		'height' => 150,
+		'flex_width' => true
+	)));
+
+// LINK 5
+	$wp_customize->add_setting('pss-partners-logos-link-5-setting');
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-partners-logos-link-5-control', array(
+		'label' => 'Obrazek 5 - link',
+		'section' => 'pss-partners-logos-section',
+		'description' => 'Link musi posiadać http:// lub https:// oraz www - przykładowo: http://www.google.com',
+		'settings' => 'pss-partners-logos-link-5-setting',
+		'type' => 'url'	
+	)));	
+
+// IMAGE 6
+	$wp_customize->add_setting ('pss-partners-logos-image-6-setting');
+	$wp_customize->add_control ( new WP_Customize_Cropped_Image_Control ( $wp_customize, 'pss-partners-logos-image-6-control', array(
+		'label' => 'Obrazek 6',
+		'description' => 'Obrazek dodatkowy',
+		'section' => 'pss-partners-logos-section',
+		'settings' => 'pss-partners-logos-image-6-setting',
+		'height' => 150,
+		'flex_width' => true
+	)));
+
+// LINK 6
+	$wp_customize->add_setting('pss-partners-logos-link-6-setting');
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-partners-logos-link-6-control', array(
+		'label' => 'Obrazek 6 - link',
+		'section' => 'pss-partners-logos-section',
+		'description' => 'Link musi posiadać http:// lub https:// oraz www - przykładowo: http://www.google.com',
+		'settings' => 'pss-partners-logos-link-6-setting',
+		'type' => 'url'	
+	)));	
+
+
+
+}
+
+add_action ( 'customize_register', 'pss_partners_logos');	
+
 
 
 ?>

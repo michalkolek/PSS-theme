@@ -6,7 +6,9 @@
     <title><?php bloginfo('name');?> <?php wp_title(); ?></title>
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
     <!-- Mobile Specific Metas
+
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
