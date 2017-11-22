@@ -446,6 +446,17 @@ function pss_partners_logos($wp_customize) {
 		'type' => 'url'	
 	)));	
 
+// TEXT UNDERNEATH THE IMAGES
+	$wp_customize->add_setting('pss-partners-logos-text-setting', array (
+		'default' => 'W roku 2016 Stowarzyszenie "Wspólnota Polska" w ramach opieki nad Polonią i Polakami za granicą, udzieliło naszej szkole wsparcia finansowego w formie jednorazowych nagród okolicznościowych dla nauczycieli i dyrektorów szkół oraz przyznało kwotę częściowo pokrywającą koszty związane z wynajmem budynku. Projekt jest realizowany ze środków Kancelarii Senatu Rzeczypospolitej Polskiej. Serdecznie dziękujemy.'
+		));
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'pss-partners-logos-text-control', array(
+		'label' => 'Pole z tekstem pod obrazkami partnerów (logo)',
+		'section' => 'pss-partners-logos-section',
+		'settings' => 'pss-partners-logos-text-setting',
+		'type' => 'textarea'
+		)));
+
 
 
 }

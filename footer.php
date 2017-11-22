@@ -44,11 +44,14 @@
        </a> 
        <?php } ?>
 
-      </div>  
-      <div class="footer__partners--text">
-        <p>Szkoła dofinansowana od Stowarzyszenia „Wspólnota Polska” ze środków Kancelarii Senatu RP w ramach opieki nad Polonią i Polakami za granicą w 2016 r.
+      </div>
+      <?php
+      if (get_theme_mod ( 'pss-partners-logos-text-setting')) { ?>
+            <div class="footer__partners--text">
+        <p><?php echo get_theme_mod( 'pss-partners-logos-text-setting' ); ?>
         </p>
       </div>
+      <?php } ?>
     </div>
 
 
